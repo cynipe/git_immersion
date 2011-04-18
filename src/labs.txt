@@ -72,10 +72,10 @@ File: hello.rb
 puts "Hello, World"
 EOF
 
-h2. Create the Repository
+h2. リポジトリの作成
 
-p. You now have a directory with a single file.  To create a git
-repository from that directory, run the git init command.
+p. これで君はディレクトリと一つのファイルが用意できた。Gitリポジトリをそのディレクトリを元に作る為に
+@git init@ コマンドを実行しよう。
 
 Execute:
 git init
