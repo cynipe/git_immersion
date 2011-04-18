@@ -1,70 +1,68 @@
 ----------------------------------------------------------------------
-h1. Setup
+h1. 設定
 
-h3. Goals
+h3. 目標
 
-* To setup git so that it is ready for work.
+* チュートリアルを進める為にGitの設定を行う
 
-h2. Setup Name and Email
+h2. 名前とメールアドレスを設定する
 
-p. If you have never used git before, you need to do some setup first.
-Run the following commands so that git knows your name and email.  If
-you have git already setup, you can skip down to the line ending
-section.
+p. 今までにGitを使ったことがない人はまずいくつかの設定を行う必要がある。
+次に示すコマンドを実行することでGitにあなたの名前とメールアドレスを設定することが出来る。
+もし既に設定済みならこのセクションは飛ばして、次の行末設定のセクションに進むといい。
 
 execute:
 git config --global user.name "Your Name"
 git config --global user.email "your_email@whatever.com"
 
-h2. Setup Line Ending Preferences
+h2. 行末設定を行う
 
-Also, for Unix/Mac users:
+Unix/Mac ユーザ:
 
 execute:
 git config --global core.autocrlf input
 git config --global core.safecrlf true
 
-And for Windows users:
+Windows ユーザ:
 
 execute:
 git config --global core.autocrlf true
 git config --global core.safecrlf true
 
 ----------------------------------------------------------------------
-h1. More Setup
+h1. その他の設定
 
-h3. Goals
+h3. 目標
 
-* Get the tutorial materials setup and ready to run.
+* チュートリアルを進める為の準備を行う
 
-h2. Get the Tutorial package.
+h2. チュートリアル用パッケージの取得
 
-p. Git the tutorial package from either:
+p. チュートリアル用パッケージを次のどっちかからGitしよう。
 
-* The memory sticks provided in the tutorial
-* The URL "http://onestepback.org/download/git_tutorial.zip":http://onestepback.org/download/git_tutorial.zip
+* チュートリアルが提供してるメモリースティック
+* Webから "http://onestepback.org/download/git_tutorial.zip":http://onestepback.org/download/git_tutorial.zip
 
-h2. Unzip the tutorial
+h2. チュートリアルを解凍する
 
-p. The tutorial package should have a main diretory "git_tutorial"
-with three sub-directories:
+p. チュートリアルパッケージはメインとなるgit_tutorialディレクトリと
+3つの以下のサブディレクトリで構成される
 
-* html -- These html files.  Point your browser to html/index.html
-* work -- An empty working directory.  Create your repos in here.
-* repos -- Prepackaged Git repositories so you can jump into the tutorial at any point.  If you get stuck, just copy the desired lab into your working directory.
+* html -- HTMLファイル:  ブラウザでhtml/index.htmlを開いてね。
+* work -- 空っぽの作業用ディレクトリ:  ここにリポジトリを作ろう。
+* repos -- チュートリアルをどこからでも始められるように軽く準備してあるGitリポジトリ: 途中で詰まってしまったらここから作業用ディレクトリにコピーして使うといい。
 
 ----------------------------------------------------------------------
-h1. Create a Project
+h1. プロジェクトの作成
 
-h3. Goals
+h3. 目標
 
-* Learn how to create a git repository from scratch.
+* 新規にGitリポジトリを作る方法を覚える
 
-h2. Create a "Hello, World" program
+h2. "Hello, World" プログラムの作成
 
-p. Starting in the empty working directory, create an empty directory
-named "hello", then create a file named @hello.rb@ with the contents
-below.
+p. まずは空の作業ディレクトリに"hello"って名前のディレクトリを作ろう。
+そして次の内容で @hello.rb@ を作成しよう。
 
 Execute:
 mkdir hello
