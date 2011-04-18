@@ -87,9 +87,9 @@ Output:
 =init
 EOF
 
-h2. Add the program to the repository
+h2. プログラムをリポジトリに追加する
 
-Now let's add the "Hello, World" program to the repository.
+さて、ここで"Hello, World" プログラムをリポジトリに追加してみよう。
 
 Execute:
 git add hello.rb
@@ -97,7 +97,7 @@ git add hello.rb
 git commit -m "First Commit"
 =commit
 
-p. You should see ...
+p. 次の出力が得られるはずだ。
 
 Output:
 =add
