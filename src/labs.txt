@@ -105,33 +105,30 @@ Output:
 EOF
 
 ----------------------------------------------------------------------
-h1. Checking Status
+h1. ステータスの確認
 
-h3. Goals
+h3. 目標
 
-* Learn how to check the status of the repository
+* リポジトリのステータスを確認する方法を覚える
 
-h2. Check the status of the repository
+h2. リポジトリのステータスを確認する
 
-p. Use the @git status@ command to check the current status of the
-repository.
+p. 今のリポジトリのステータスを確認するために @git status@ コマンドを実行してみよう。
 
 Execute:
 git status
 =status
 
-p. You should see
+p. 次の結果が見れるはずだ。
 
 Output:
 =status
 EOF
 
-p. The status command reports that there is nothing to commit.  This
-means that the repository has all the current state of the working
-directory.  There are no outstanding changes to record.
+p. statusコマンドはコミット対象となるものが何もないことを教えてくれる。このコマンドはリポジトリが持つ全てのディレクトリのステータスを教えてくれる。
+今は記録するための情報は何も無い。
 
-p. We will use the @git status@ command to continue to monitor the
-state between the repository and the working directory.
+p. 僕たちはこの後の作業も @git status@ コマンドを使ってリポジトリと作業ディレクトリのステータスの確認をしていくからよく覚えておいてね。
 
 ----------------------------------------------------------------------
 h1. Making Changes
