@@ -131,58 +131,56 @@ p. statusコマンドはコミット対象となるものが何もないこと�
 p. 僕たちはこの後の作業も @git status@ コマンドを使ってリポジトリと作業ディレクトリのステータスの確認をしていくからよく覚えておいてね。
 
 ----------------------------------------------------------------------
-h1. Making Changes
+h1. 変更の作成
 
-h3. Goals
+h3. 目標
 
-* Learn how to monitor the state of the working directory
+* 作業ディレクトリの状態を知る方法を覚える
 
-h2. Change the "Hello, World" program.
+h2. "Hello, World" プログラムを書き換えてみよう
 
-p. It's time to change our hello program to take an argument from the
-command line.  Change the file to be:
+p. 僕らの最初のプログラムをコマンドライン引数を受け取れるように書き換えてみよう。
+変更後のファイルはこんな感じになる:
 
 File: hello.rb
 puts "Hello, #{ARGV.first}!"
 EOF
 
-h2. Check the status
+h2. ステータスの確認
 
-p. Now check the status of the working directory.
+p. 書き換え終わったところで今の作業ディレクトリの状態を見てみよう。
 
 Execute:
 !git status
 =status
 
-p. You should see ...
+p. こんな結果がみれるはずだ。
 
 Output:
 =status
 EOF
 
-p. The first thing to notice is that git knows that the @hello.rb@
-file has been modified, but git has not yet been notified of these
-changes.
+p. gitが @hello.rb@ が変更されたことを検知していることに気づくと思う。
+でも実はgitはまだこの変更された箇所の通知を受け取ってはいない。
 
-p. Also notice that the status message gives you hints about what you
-need to do next.  If you want to add these changes to the repository,
-then use the @git add@ command.  Otherwise the @git checkout@ command
-can be used to discard the changes.
+p. そしてステータスメッセージが君が次に何をすべきかのヒントをくれていることにも気づくと思う。
+もし君がこの変更をリポジトリに追加したいなら @git add@ コマンドを使うことでそれが出来る。
+実はそうではなく追加したくないのであれば @git checkout@ を実行することで今の変更を破棄することが出来る。
 
-h2. Up Next
+h2. おつぎは
 
-p. Let's stage the change.
+p. 変更をステージしてみよう！
 
 ----------------------------------------------------------------------
-h1. Staging Changes
+h1. 変更のステージ
 
-h3. Goals
+h3. 目標
 
-* Learn how to stage changes for later commits
+* コミットする為の変更をステージする方法を覚える
 
-h2. Add Changes
+h2. 変更の追加
 
-p. Now tell git to stage the changes.  Check the status
+p. ここでgitに変更をステージすることを伝えて、状態をチェックしてみよう。
 
 Execute:
 git add hello.rb
@@ -190,21 +188,19 @@ git add hello.rb
 git status
 =status
 
-p. You should see ...
+p. 結果は
 
 Output:
 =add
 =status
 EOF
 
-p. The change to the @hello.rb@ file has been staged.  This means that
-git now knows about the change, but the change hasn't been
-_permanently_ recorded in the repository yet.  The next commit
-operation will include the staged changes.
+p. @hello.rb@ ファイルの変更点はこれでステージされた。これがどういうことかというと、
+ここで初めてgitはファイルが変更されたことを知ることが出来る。でもこれでこの変更が
+リポジトリ上で _確定_ されたわけじゃない。次のコミットする作業でこの変更を取り込むことが出来る。
 
-p. If you decide you _don't_ want to commit that change after all, the
-status command reminds you that the @git reset@ command can be used to
-unstage that change.
+p. もし君がこの変更をコミットしたく _なかったら_ status コマンドの結果が @git reset@ コマンドを
+使ってステージの取り消しを行う方法が使えることを教えてくれる。
 
 ----------------------------------------------------------------------
 h1. Staging and Committing
